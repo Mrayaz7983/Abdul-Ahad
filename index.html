@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al Ahad Digital Media Agency</title>
+  Tailwind CSS CDN
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-950 to-blue-950 text-white min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="w-full fixed top-0 left-0 z-50 glass-blur shadow-lg border-b border-blue-900/30">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="#" class="flex items-center space-x-2 font-bold text-2xl neon tracking-wide">
+        <img src="img.jpeg" alt="Logo" class="w-12 h-12 rounded-full object-cover border-2 border-blue-400 shadow-lg">
+        <span>Al Ahad Digital</span>
+      </a>
+      <div class="hidden md:flex items-center space-x-8 font-semibold">
+        <a href="#hero" class="hover:text-cyan-400 transition">Home</a>
+        <div class="relative group">
+          <button class="flex items-center hover:text-cyan-400 transition focus:outline-none">
+            Services
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <!-- Dropdown -->
+          <div class="absolute left-0 mt-2 w-56 glass-blur rounded-xl shadow-xl opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition pointer-events-none group-hover:pointer-events-auto z-20 border border-blue-900/30">
+            <a href="#services" class="block px-5 py-3 hover:bg-cyan-600/80 hover:text-white transition rounded-t-xl">Graphic Designing</a>
+            <a href="#services" class="block px-5 py-3 hover:bg-cyan-600/80 hover:text-white transition">Web Development</a>
+            <a href="#services" class="block px-5 py-3 hover:bg-cyan-600/80 hover:text-white transition">Digital Marketing</a>
+            <a href="#services" class="block px-5 py-3 hover:bg-cyan-600/80 hover:text-white transition">Social Media Marketing</a>
+            <a href="#services" class="block px-5 py-3 hover:bg-cyan-600/80 hover:text-white transition rounded-b-xl">SEO Optimization</a>
+          </div>
+        </div>
+        <a href="#team" class="hover:text-cyan-400 transition">Team</a>
+        <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+      </div>
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden glass-blur px-4 pb-4 border-t border-blue-900/30">
+      <a href="#hero" class="block py-2 hover:text-cyan-400">Home</a>
+      <div class="relative group">
+        <button class="flex items-center w-full py-2 hover:text-cyan-400 focus:outline-none">
+          Services
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="pl-4">
+          <a href="#services" class="block py-2 hover:text-cyan-400">Graphic Designing</a>
+          <a href="#services" class="block py-2 hover:text-cyan-400">Web Development</a>
+          <a href="#services" class="block py-2 hover:text-cyan-400">Digital Marketing</a>
+          <a href="#services" class="block py-2 hover:text-cyan-400">Social Media Marketing</a>
+          <a href="#services" class="block py-2 hover:text-cyan-400">SEO Optimization</a>
+        </div>
+      </div>
+      <a href="#team" class="block py-2 hover:text-cyan-400">Team</a>
+      <a href="#contact" class="block py-2 hover:text-cyan-400">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="gradient-bg flex items-center justify-center min-h-screen pt-32 pb-16">
+    <div class="max-w-3xl mx-auto text-center animate__animated animate__fadeInDown glass p-12 shadow-2xl border border-blue-900/30">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight neon">
+        Grow Your Business with <span class="text-cyan-400">Al Ahad Digital Media Agency</span>
+      </h1>
+      <p class="text-lg md:text-2xl text-gray-200 mb-8 font-medium">Full-Service Digital Marketing Agency for Modern Brands</p>
+      <a href="#contact" class="inline-block px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-blue-600 hover:to-cyan-500 text-white font-bold rounded-xl shadow-xl btn-glow transition animate__animated animate__fadeInUp text-lg">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 bg-gradient-to-br from-blue-950 via-gray-950 to-gray-900">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 neon">Our Services</h2>
+        <p class="text-gray-300 text-lg">Complete digital marketing solutions for your business</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Service Card -->
+        <div class="glass gradient-card p-10 flex flex-col items-center text-center shadow-2xl border-2 border-transparent card-hover transition-all duration-300">
+          <span class="bg-gradient-to-br from-cyan-400 to-blue-600 p-5 rounded-full mb-5 shadow-lg">
+            <i data-feather="image" class="w-10 h-10 text-white"></i>
+          </span>
+          <h3 class="font-bold text-2xl mb-3 text-cyan-300">Graphic Designing</h3>
+          <p class="text-gray-200">Creative designs for your brand, including logos, banners, and social media posts.</p>
+        </div>
+        <div class="glass gradient-card p-10 flex flex-col items-center text-center shadow-2xl border-2 border-transparent card-hover transition-all duration-300">
+          <span class="bg-gradient-to-br from-green-400 to-blue-500 p-5 rounded-full mb-5 shadow-lg">
+            <i data-feather="code" class="w-10 h-10 text-white"></i>
+          </span>
+          <h3 class="font-bold text-2xl mb-3 text-green-300">Web Development</h3>
+          <p class="text-gray-200">Modern, responsive websites tailored to your business needs.</p>
+        </div>
+        <div class="glass gradient-card p-10 flex flex-col items-center text-center shadow-2xl border-2 border-transparent card-hover transition-all duration-300">
+          <span class="bg-gradient-to-br from-yellow-400 to-pink-500 p-5 rounded-full mb-5 shadow-lg">
+            <i data-feather="bar-chart-2" class="w-10 h-10 text-white"></i>
+          </span>
+          <h3 class="font-bold text-2xl mb-3 text-yellow-300">Digital Marketing</h3>
+          <p class="text-gray-200">Grow your business with targeted digital marketing strategies.</p>
+        </div>
+        <div class="glass gradient-card p-10 flex flex-col items-center text-center shadow-2xl border-2 border-transparent card-hover transition-all duration-300">
+          <span class="bg-gradient-to-br from-pink-400 to-purple-500 p-5 rounded-full mb-5 shadow-lg">
+            <i data-feather="users" class="w-10 h-10 text-white"></i>
+          </span>
+          <h3 class="font-bold text-2xl mb-3 text-pink-300">Social Media Marketing</h3>
+          <p class="text-gray-200">Engage your audience and grow your brand on all major social platforms.</p>
+        </div>
+        <div class="glass gradient-card p-10 flex flex-col items-center text-center shadow-2xl border-2 border-transparent card-hover transition-all duration-300">
+          <span class="bg-gradient-to-br from-purple-400 to-cyan-500 p-5 rounded-full mb-5 shadow-lg">
+            <i data-feather="search" class="w-10 h-10 text-white"></i>
+          </span>
+          <h3 class="font-bold text-2xl mb-3 text-purple-300">SEO Optimization</h3>
+          <p class="text-gray-200">Boost your website ranking and visibility with our expert SEO strategies.</p>
+        </div>
+        <div class="glass gradient-card p-10 flex flex-col items-center text-center shadow-2xl border-2 border-transparent card-hover transition-all duration-300">
+          <span class="bg-gradient-to-br from-indigo-400 to-blue-700 p-5 rounded-full mb-5 shadow-lg">
+            <i data-feather="activity" class="w-10 h-10 text-white"></i>
+          </span>
+          <h3 class="font-bold text-2xl mb-3 text-indigo-300">Content Creation</h3>
+          <p class="text-gray-200">High-quality content for blogs, websites, and social media.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="py-24 gradient-bg">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 neon">Meet Our Team</h2>
+        <p class="text-gray-200 text-lg">Our creative and experienced professionals</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <!-- Team Member -->
+        <div class="glass p-10 flex flex-col items-center text-center shadow-2xl border-2 border-blue-400/30 card-hover transition-all duration-300">
+          <img src="" alt="Abdul Ahad" class="w-28 h-28 rounded-full object-cover border-4 border-cyan-400 mb-5 shadow-lg">
+          <h4 class="font-bold text-xl mb-1 text-cyan-200">Abdul Ahad</h4>
+          <p class="text-cyan-400 mb-3 font-semibold">CEO & Founder</p>
+          <div class="flex space-x-3">
+            <a href="#" class="text-gray-300 hover:text-cyan-400"><i data-feather="linkedin"></i></a>
+            <a href="#" class="text-gray-300 hover:text-cyan-400"><i data-feather="twitter"></i></a>
+          </div>
+        </div>
+        <div class="glass p-10 flex flex-col items-center text-center shadow-2xl border-2 border-green-400/30 card-hover transition-all duration-300">
+          <img src="img3.jpg" alt="Ayaz Ahmed" class="w-28 h-28 rounded-full object-cover border-4 border-green-400 mb-5 shadow-lg">
+          <h4 class="font-bold text-xl mb-1 text-green-200">Ayaz Ahmed</h4>
+          <p class="text-green-400 mb-3 font-semibold">Web Developer</p>
+          <div class="flex space-x-3">
+            <a href="#" class="text-gray-300 hover:text-green-400"><i data-feather="linkedin"></i></a>
+            <a href="#" class="text-gray-300 hover:text-green-400"><i data-feather="twitter"></i></a>
+          </div>
+        </div>
+        <div class="glass p-10 flex flex-col items-center text-center shadow-2xl border-2 border-pink-400/30 card-hover transition-all duration-300">
+          <img src="img 2.jpg" alt="Hina Fahim" class="w-28 h-28 rounded-full object-cover border-4 border-pink-400 mb-5 shadow-lg">
+          <h4 class="font-bold text-xl mb-1 text-pink-200">Hina Fahim</h4>
+          <p class="text-pink-400 mb-3 font-semibold">Web Developer</p>
+          <div class="flex space-x-3">
+            <a href="#" class="text-gray-300 hover:text-pink-400"><i data-feather="linkedin"></i></a>
+            <a href="#" class="text-gray-300 hover:text-pink-400"><i data-feather="twitter"></i></a>
+          </div>
+        </div>
+        <div class="glass p-10 flex flex-col items-center text-center shadow-2xl border-2 border-purple-400/30 card-hover transition-all duration-300">
+          <img src="" alt="Mariyum" class="w-28 h-28 rounded-full object-cover border-4 border-purple-400 mb-5 shadow-lg">
+          <h4 class="font-bold text-xl mb-1 text-purple-200">Mariyum</h4>
+          <p class="text-purple-400 mb-3 font-semibold">Sales Manager</p>
+          <div class="flex space-x-3">
+            <a href="#" class="text-gray-300 hover:text-purple-400"><i data-feather="linkedin"></i></a>
+            <a href="#" class="text-gray-300 hover:text-purple-400"><i data-feather="twitter"></i></a>
+          </div>
+        </div>
+        <div class="glass p-10 flex flex-col items-center text-center shadow-2xl border-2 border-purple-400/30 card-hover transition-all duration-300">
+          <img src="" alt="Abdul Rehman" class="w-28 h-28 rounded-full object-cover border-4 border-purple-400 mb-5 shadow-lg">
+          <h4 class="font-bold text-xl mb-1 text-purple-200">Abdul Rehman</h4>
+          <p class="text-purple-400 mb-3 font-semibold">Marketing Manager</p>
+          <div class="flex space-x-3">
+            <a href="#" class="text-gray-300 hover:text-purple-400"><i data-feather="linkedin"></i></a>
+            <a href="#" class="text-gray-300 hover:text-purple-400"><i data-feather="twitter"></i></a>
+          </div>
+        </div>
+        <div class="glass p-10 flex flex-col items-center text-center shadow-2xl border-2 border-green-400/30 card-hover transition-all duration-300">
+            <img src="" alt="Amna" class="w-28 h-28 rounded-full object-cover border-4 border-green-400 mb-5 shadow-lg">
+            <h4 class="font-bold text-xl mb-1 text-green-200">Amna</h4>
+            <p class="text-green-400 mb-3 font-semibold">Graphic Designer</p>
+            <div class="flex space-x-3">
+              <a href="#" class="text-gray-300 hover:text-green-400"><i data-feather="linkedin"></i></a>
+              <a href="#" class="text-gray-300 hover:text-green-400"><i data-feather="twitter"></i></a>
+            </div>
+            
+      </div>
+      <div class="glass p-10 flex flex-col items-center text-center shadow-2xl border-2 border-green-400/30 card-hover transition-all duration-300">
+        <img src="" alt="Zainab" class="w-28 h-28 rounded-full object-cover border-4 border-green-400 mb-5 shadow-lg">
+        <h4 class="font-bold text-xl mb-1 text-green-200">Zainab</h4>
+        <p class="text-green-400 mb-3 font-semibold">Graphic Designer</p>
+        <div class="flex space-x-3">
+          <a href="#" class="text-gray-300 hover:text-green-400"><i data-feather="linkedin"></i></a>
+          <a href="#" class="text-gray-300 hover:text-green-400"><i data-feather="twitter"></i></a>
+        </div>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 bg-gradient-to-br from-blue-950 via-gray-950 to-gray-900">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 neon">Contact Us</h2>
+        <p class="text-gray-300 text-lg">We'd love to hear from you! Fill out the form below or reach us directly.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <form action="https://formspree.io/f/xdoqzqgy" method="POST" class="glass p-10 rounded-2xl shadow-2xl space-y-8 border-2 border-blue-900/30">
+          <div>
+            <label for="name" class="block text-gray-300 mb-2 font-semibold">Your Name</label>
+            <input type="text" id="name" name="name" required class="w-full px-5 py-3 rounded-xl bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition">
+          </div>
+          <div>
+            <label for="email" class="block text-gray-300 mb-2 font-semibold">Your Email</label>
+            <input type="email" id="email" name="email" required class="w-full px-5 py-3 rounded-xl bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition">
+          </div>
+          <div>
+            <label for="message" class="block text-gray-300 mb-2 font-semibold">Message</label>
+            <textarea id="message" name="message" rows="4" required class="w-full px-5 py-3 rounded-xl bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition"></textarea>
+          </div>
+          <button type="submit" class="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-blue-600 hover:to-cyan-500 text-white font-bold rounded-xl shadow-xl btn-glow transition text-lg">Send Message</button>
+          <input type="hidden" name="_replyto" value="alahadigitalmediaa@gmail.com">
+        </form>
+        <!-- Contact Info -->
+        <div class="flex flex-col items-center justify-center text-center space-y-8">
+          <div>
+            <h4 class="text-2xl font-bold mb-2 text-cyan-300">Email</h4>
+            <a href="mailto:alahadigitalmediaa@gmail.com" class="text-cyan-400 hover:underline text-lg">alahadigitalmediaa@gmail.com</a>
+          </div>
+          <div>
+            <h4 class="text-2xl font-bold mb-2 text-green-300">WhatsApp</h4>
+            <a href="https://wa.me/923282059669" target="_blank" class="inline-flex items-center px-7 py-4 bg-gradient-to-r from-green-400 to-cyan-500 hover:from-cyan-500 hover:to-green-400 text-white font-bold rounded-xl shadow-xl btn-glow transition text-lg">
+              <i data-feather="message-circle" class="mr-3"></i> Chat on WhatsApp
+            </a>
+            <p class="text-gray-400 mt-2 text-lg">+92 328 2059669</p>
+          </div>
+          <div>
+            <h4 class="text-2xl font-bold mb-2 text-blue-300">Follow Us</h4>
+            <div class="flex space-x-5 justify-center">
+              <a href="#" class="text-gray-300 hover:text-cyan-400"><i data-feather="linkedin"></i></a>
+              <a href="#" class="text-gray-300 hover:text-cyan-400"><i data-feather="twitter"></i></a>
+              <a href="#" class="text-gray-300 hover:text-cyan-400"><i data-feather="facebook"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="gradient-footer text-center py-8 mt-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="text-gray-300 text-lg">&copy; 2024 <span class="text-cyan-400 font-bold">Al Ahad Digital Media Agency</span>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+    // Feather icons
+    feather.replace();
+  </script>
+  <script src="main.js"></script>
+  <script>
+    feather.replace();
+  </script>
+  
+</body>
+</html>
