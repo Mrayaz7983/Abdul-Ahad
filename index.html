@@ -1,275 +1,345 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Al Ahad Digital Media Agency</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <!-- Animate.css for animations -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <!-- Feather Icons -->
   <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="style.css">
-  
+  <meta name="description"
+    content="Al Ahad Digital Media Agency - Full-service digital marketing and development agency helping brands grow online.">
+  <link rel="icon" href="favicon.ico">
 </head>
-<body class="bg-gradient-to-br from-gray-900 via-gray-950 to-blue-950 text-white min-h-screen">
 
+<body>
   <!-- Navbar -->
-  <nav class="w-full fixed top-0 left-0 z-50 glass-blur shadow-lg border-b border-blue-900/30">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-      <a href="#" class="flex items-center space-x-2 font-bold text-2xl neon tracking-wide">
-        <img src="img.jpeg" alt="Logo" class="w-12 h-12 rounded-full object-cover border-2 border-blue-400 shadow-lg">
-        <span>Al Ahad Digital</span>
+  <nav class="navbar animate__animated animate__fadeInDown">
+    <div class="navbar-container">
+      <a href="#" class="navbar-brand neon">
+        <img src="logo img.jpg" alt="Logo" class="navbar-logo">
+        <span>Al Ahad Digital Media</span>
       </a>
-      <div class="hidden md:flex items-center space-x-8 font-semibold">
-        <a href="#hero" class="hover:text-cyan-400 transition">Home</a>
-        <div class="relative group">
-          <button class="flex items-center hover:text-cyan-400 transition focus:outline-none">
+      <div class="navbar-links">
+        <a href="#hero" class="nav-link">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn">
             Services
-            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M19 9l-7 7-7-7"/>
+            <svg class="dropdown-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-          <!-- Dropdown -->
-          <div class="absolute left-0 mt-2 w-56 glass-blur rounded-xl shadow-xl opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition pointer-events-none group-hover:pointer-events-auto z-20 border border-blue-900/30">
-            <a href="#services" class="block px-5 py-3 hover:bg-cyan-600/80 hover:text-white transition rounded-t-xl">Graphic Designing</a>
-            <a href="#services" class="block px-5 py-3 hover:bg-cyan-600/80 hover:text-white transition">Web Development</a>
-            <a href="#services" class="block px-5 py-3 hover:bg-cyan-600/80 hover:text-white transition">Digital Marketing</a>
-            <a href="#services" class="block px-5 py-3 hover:bg-cyan-600/80 hover:text-white transition">Social Media Marketing</a>
-            <a href="#services" class="block px-5 py-3 hover:bg-cyan-600/80 hover:text-white transition rounded-b-xl">SEO Optimization</a>
+          <div class="nav-dropdown-menu">
+            <a href="#services" class="dropdown-item">Graphic Designing</a>
+            <a href="#services" class="dropdown-item">Web Development</a>
+            <a href="#services" class="dropdown-item">Digital Marketing</a>
+            <a href="#services" class="dropdown-item">Social Media Marketing</a>
+            <a href="#services" class="dropdown-item">SEO Optimization</a>
           </div>
         </div>
-        <a href="#team" class="hover:text-cyan-400 transition">Team</a>
-        <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+        <a href="#blogs" class="nav-link">Blogs</a>
+        <a href="#team" class="nav-link">Team</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </div>
       <!-- Mobile menu button -->
-      <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M4 6h16M4 12h16M4 18h16"/>
+      <button id="mobile-menu-btn" class="mobile-menu-btn">
+        <svg class="mobile-menu-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </div>
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden glass-blur px-4 pb-4 border-t border-blue-900/30">
-      <a href="#hero" class="block py-2 hover:text-cyan-400">Home</a>
-      <div class="relative group">
-        <button class="flex items-center w-full py-2 hover:text-cyan-400 focus:outline-none">
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="#hero" class="mobile-nav-link">Home</a>
+      <div class="mobile-nav-dropdown">
+        <button class="mobile-nav-dropdown-btn">
           Services
-          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7"/>
+          <svg class="dropdown-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M19 9l-7 7-7-7" />
           </svg>
         </button>
-        <div class="pl-4">
-          <a href="#services" class="block py-2 hover:text-cyan-400">Graphic Designing</a>
-          <a href="#services" class="block py-2 hover:text-cyan-400">Web Development</a>
-          <a href="#services" class="block py-2 hover:text-cyan-400">Digital Marketing</a>
-          <a href="#services" class="block py-2 hover:text-cyan-400">Social Media Marketing</a>
-          <a href="#services" class="block py-2 hover:text-cyan-400">SEO Optimization</a>
+        <div class="mobile-dropdown-menu">
+          <a href="#services" class="mobile-dropdown-item">Graphic Designing</a>
+          <a href="#services" class="mobile-dropdown-item">Web Development</a>
+          <a href="#services" class="mobile-dropdown-item">Digital Marketing</a>
+          <a href="#services" class="mobile-dropdown-item">Social Media Marketing</a>
+          <a href="#services" class="mobile-dropdown-item">SEO Optimization</a>
         </div>
       </div>
-      <a href="#team" class="block py-2 hover:text-cyan-400">Team</a>
-      <a href="#contact" class="block py-2 hover:text-cyan-400">Contact</a>
+      <a href="#blogs" class="mobile-nav-link">Blogs</a>
+      <a href="#team" class="mobile-nav-link">Team</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="hero" class="gradient-bg flex items-center justify-center min-h-screen pt-32 pb-16">
-    <div class="max-w-3xl mx-auto text-center animate__animated animate__fadeInDown glass p-12 shadow-2xl border border-blue-900/30">
-      <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight neon">
-        Grow Your Business with <span class="text-cyan-400">Al Ahad Digital Media Agency</span>
-      </h1>
-      <p class="text-lg md:text-2xl text-gray-200 mb-8 font-medium">Full-Service Digital Marketing Agency for Modern Brands</p>
-      <a href="#contact" class="inline-block px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-blue-600 hover:to-cyan-500 text-white font-bold rounded-xl shadow-xl btn-glow transition animate__animated animate__fadeInUp text-lg">Get Started</a>
+  <!-- Hero Section with Background Image Slider -->
+  <section id="hero" class="hero-section">
+    <div class="hero-slider-bg">
+      <div class="slider">
+        <div class="slide"
+          style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        </div>
+        <div class="slide"
+          style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        </div>
+        <div class="slide"
+          style="background-image: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title fade-in">Grow Your Business with <br><span class="hero-title-highlight">Al Ahad Digital Media Agency</span></h1>
+      <p class="hero-subtitle fade-in">Full-Service Digital Marketing Agency for Modern Brands!</p>
+      <a href="#contact" class="btn btn-primary btn-glow hero-btn">Get Started</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section fade-in-up">
+    <div class="about-container">
+      <div class="about-image animate__animated animate__fadeInLeft">
+        <img src="about img.jpg" alt="About Al Ahad Digital Media" class="about-img">
+      </div>
+      <div class="about-content animate__animated animate__fadeInRight">
+        <h2 class="section-title neon">About Us</h2>
+        <p class="about-description">
+          <span class="about-highlight">Al Ahad Digital Media Agency</span> is a team of passionate
+          professionals dedicated to elevating your brand in the digital world. With years of experience in design,
+          development, and marketing, we deliver innovative solutions tailored to your business goals.
+        </p>
+        <ul class="about-list">
+          <li>Result-driven strategies for every client</li>
+          <li>Creative, modern, and user-focused approach</li>
+          <li>Transparent communication and timely delivery</li>
+          <li>Trusted by startups and established brands alike</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-glow">Let's Work Together</a>
+      </div>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="py-24 bg-gradient-to-br from-blue-950 via-gray-950 to-gray-900">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4 neon">Our Services</h2>
-        <p class="text-gray-300 text-lg">Complete digital marketing solutions for your business</p>
+  <section id="services" class="services-section fade-in-up">
+    <div class="services-container">
+      <div class="section-header">
+        <h2 class="section-title neon animate__animated animate__fadeInDown">Our Services</h2>
+        <p class="section-subtitle animate__animated animate__fadeInUp">Complete digital marketing solutions for your business</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="services-grid">
         <!-- Service Card -->
-        <div class="glass gradient-card p-10 flex flex-col items-center text-center shadow-2xl border-2 border-transparent card-hover transition-all duration-300">
-          <span class="bg-gradient-to-br from-cyan-400 to-blue-600 p-5 rounded-full mb-5 shadow-lg">
-            <i data-feather="image" class="w-10 h-10 text-white"></i>
+        <div class="service-card glass gradient-card fade-in-up">
+          <span class="service-icon-bg animate__animated animate__pulse">
+            <i data-feather="image" class="service-icon"></i>
           </span>
-          <h3 class="font-bold text-2xl mb-3 text-cyan-300">Graphic Designing</h3>
-          <p class="text-gray-200">Creative designs for your brand, including logos, banners, and social media posts.</p>
+          <h3 class="service-title">Graphic Designing</h3>
+          <p class="service-desc">Creative designs for your brand, including logos, banners, and social media posts.</p>
         </div>
-        <div class="glass gradient-card p-10 flex flex-col items-center text-center shadow-2xl border-2 border-transparent card-hover transition-all duration-300">
-          <span class="bg-gradient-to-br from-green-400 to-blue-500 p-5 rounded-full mb-5 shadow-lg">
-            <i data-feather="code" class="w-10 h-10 text-white"></i>
+        <div class="service-card glass gradient-card fade-in-up">
+          <span class="service-icon-bg animate__animated animate__pulse">
+            <i data-feather="code" class="service-icon"></i>
           </span>
-          <h3 class="font-bold text-2xl mb-3 text-green-300">Web Development</h3>
-          <p class="text-gray-200">Modern, responsive websites tailored to your business needs.</p>
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-desc">Modern, responsive websites tailored to your business needs.</p>
         </div>
-        <div class="glass gradient-card p-10 flex flex-col items-center text-center shadow-2xl border-2 border-transparent card-hover transition-all duration-300">
-          <span class="bg-gradient-to-br from-yellow-400 to-pink-500 p-5 rounded-full mb-5 shadow-lg">
-            <i data-feather="bar-chart-2" class="w-10 h-10 text-white"></i>
+        <div class="service-card glass gradient-card fade-in-up">
+          <span class="service-icon-bg animate__animated animate__pulse">
+            <i data-feather="bar-chart-2" class="service-icon"></i>
           </span>
-          <h3 class="font-bold text-2xl mb-3 text-yellow-300">Digital Marketing</h3>
-          <p class="text-gray-200">Grow your business with targeted digital marketing strategies.</p>
+          <h3 class="service-title">Digital Marketing</h3>
+          <p class="service-desc">Grow your business with targeted digital marketing strategies.</p>
         </div>
-        <div class="glass gradient-card p-10 flex flex-col items-center text-center shadow-2xl border-2 border-transparent card-hover transition-all duration-300">
-          <span class="bg-gradient-to-br from-pink-400 to-purple-500 p-5 rounded-full mb-5 shadow-lg">
-            <i data-feather="users" class="w-10 h-10 text-white"></i>
+        <div class="service-card glass gradient-card fade-in-up">
+          <span class="service-icon-bg animate__animated animate__pulse">
+            <i data-feather="users" class="service-icon"></i>
           </span>
-          <h3 class="font-bold text-2xl mb-3 text-pink-300">Social Media Marketing</h3>
-          <p class="text-gray-200">Engage your audience and grow your brand on all major social platforms.</p>
+          <h3 class="service-title">Social Media Marketing</h3>
+          <p class="service-desc">Engage your audience and grow your brand on all major social platforms.</p>
         </div>
-        <div class="glass gradient-card p-10 flex flex-col items-center text-center shadow-2xl border-2 border-transparent card-hover transition-all duration-300">
-          <span class="bg-gradient-to-br from-purple-400 to-cyan-500 p-5 rounded-full mb-5 shadow-lg">
-            <i data-feather="search" class="w-10 h-10 text-white"></i>
+        <div class="service-card glass gradient-card fade-in-up">
+          <span class="service-icon-bg animate__animated animate__pulse">
+            <i data-feather="search" class="service-icon"></i>
           </span>
-          <h3 class="font-bold text-2xl mb-3 text-purple-300">SEO Optimization</h3>
-          <p class="text-gray-200">Boost your website ranking and visibility with our expert SEO strategies.</p>
+          <h3 class="service-title">SEO Optimization</h3>
+          <p class="service-desc">Boost your website ranking and visibility with our expert SEO strategies.</p>
         </div>
-        <div class="glass gradient-card p-10 flex flex-col items-center text-center shadow-2xl border-2 border-transparent card-hover transition-all duration-300">
-          <span class="bg-gradient-to-br from-indigo-400 to-blue-700 p-5 rounded-full mb-5 shadow-lg">
-            <i data-feather="activity" class="w-10 h-10 text-white"></i>
+        <div class="service-card glass gradient-card fade-in-up">
+          <span class="service-icon-bg animate__animated animate__pulse">
+            <i data-feather="activity" class="service-icon"></i>
           </span>
-          <h3 class="font-bold text-2xl mb-3 text-indigo-300">Content Creation</h3>
-          <p class="text-gray-200">High-quality content for blogs, websites, and social media.</p>
+          <h3 class="service-title">Content Creation</h3>
+          <p class="service-desc">High-quality content for blogs, websites, and social media.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blogs Section -->
+  <section id="blogs" class="blogs-section fade-in">
+    <div class="blogs-container">
+      <div class="section-header">
+        <h2 class="section-title neon">Latest Blogs</h2>
+        <p class="section-subtitle">Insights, tips, and trends from our digital experts</p>
+      </div>
+      <div class="blogs-grid">
+        <!-- Blog Card 1 -->
+        <div class="blog-card glass gradient-card">
+          <img src="blog image 2.jpg" alt="Blog 1" class="blog-img">
+          <h3 class="blog-title">5 Digital Marketing Trends to Watch in 2024</h3>
+          <p class="blog-desc">Explore the top trends that will define digital marketing success this year.</p>
+          <a href="#" class="blog-link">Read More</a>
+        </div>
+        <!-- Blog Card 2 -->
+        <div class="blog-card glass gradient-card">
+          <img src="blog img 2.jpg" alt="Blog 2" class="blog-img">
+          <h3 class="blog-title">How to Build a Brand on Social Media</h3>
+          <p class="blog-desc">Learn practical ways to grow your brand’s presence and engagement online.</p>
+          <a href="#" class="blog-link">Read More</a>
+        </div>
+        <!-- Blog Card 3 -->
+        <div class="blog-card glass gradient-card">
+          <img src="blog img 1.jpg" alt="Blog 3" class="blog-img">
+          <h3 class="blog-title">SEO Basics: How to Rank Your Website</h3>
+          <p class="blog-desc">A simple guide to help you improve your website’s search engine ranking.</p>
+          <a href="#" class="blog-link">Read More</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Team Section -->
-  <section id="team" class="py-24 gradient-bg">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4 neon">Meet Our Team</h2>
-        <p class="text-gray-200 text-lg">Our creative and experienced professionals</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-        <!-- Team Member -->
-        <div class="glass p-10 flex flex-col items-center text-center shadow-2xl border-2 border-blue-400/30 card-hover transition-all duration-300">
-          <img src="" alt="Abdul Ahad" class="w-28 h-28 rounded-full object-cover border-4 border-cyan-400 mb-5 shadow-lg">
-          <h4 class="font-bold text-xl mb-1 text-cyan-200">Abdul Ahad</h4>
-          <p class="text-cyan-400 mb-3 font-semibold">CEO & Founder</p>
-          <div class="flex space-x-3">
-            <a href="#" class="text-gray-300 hover:text-cyan-400"><i data-feather="linkedin"></i></a>
-            <a href="#" class="text-gray-300 hover:text-cyan-400"><i data-feather="twitter"></i></a>
-          </div>
-        </div>
-        <div class="glass p-10 flex flex-col items-center text-center shadow-2xl border-2 border-green-400/30 card-hover transition-all duration-300">
-          <img src="" alt="Alishba" class="w-28 h-28 rounded-full object-cover border-4 border-green-400 mb-5 shadow-lg">
-          <h4 class="font-bold text-xl mb-1 text-green-200">Alishba Fahim</h4>
-          <p class="text-green-400 mb-3 font-semibold">Senior Web Developer</p>
-          <div class="flex space-x-3">
-            <a href="#" class="text-gray-300 hover:text-green-400"><i data-feather="linkedin"></i></a>
-            <a href="#" class="text-gray-300 hover:text-green-400"><i data-feather="twitter"></i></a>
-          </div>
-        </div>
-        <div class="glass p-10 flex flex-col items-center text-center shadow-2xl border-2 border-pink-400/30 card-hover transition-all duration-300">
-          <img src="img3.jpg" alt="Ayaz Ahmed" class="w-28 h-28 rounded-full object-cover border-4 border-pink-400 mb-5 shadow-lg">
-          <h4 class="font-bold text-xl mb-1 text-pink-200">Ayaz Ahmed </h4>
-          <p class="text-pink-400 mb-3 font-semibold">Web Developer</p>
-          <div class="flex space-x-3">
-            <a href="#" class="text-gray-300 hover:text-pink-400"><i data-feather="linkedin"></i></a>
-            <a href="#" class="text-gray-300 hover:text-pink-400"><i data-feather="twitter"></i></a>
-          </div>
-        </div>
-        <div class="glass p-10 flex flex-col items-center text-center shadow-2xl border-2 border-purple-400/30 card-hover transition-all duration-300">
-          <img src="img 2.jpg" alt="Hina Fahim" class="w-28 h-28 rounded-full object-cover border-4 border-purple-400 mb-5 shadow-lg">
-          <h4 class="font-bold text-xl mb-1 text-purple-200">Hina Fahim</h4>
-          <p class="text-purple-400 mb-3 font-semibold">Web Developer</p>
-          <div class="flex space-x-3">
-            <a href="#" class="text-gray-300 hover:text-purple-400"><i data-feather="linkedin"></i></a>
-            <a href="#" class="text-gray-300 hover:text-purple-400"><i data-feather="twitter"></i></a>
-          </div>
-        </div>
-        <div class="glass p-10 flex flex-col items-center text-center shadow-2xl border-2 border-purple-400/30 card-hover transition-all duration-300">
-          <img src="" alt="Mariyum" class="w-28 h-28 rounded-full object-cover border-4 border-purple-400 mb-5 shadow-lg">
-          <h4 class="font-bold text-xl mb-1 text-purple-200">Mariyum</h4>
-          <p class="text-purple-400 mb-3 font-semibold">Sales Manager</p>
-          <div class="flex space-x-3">
-            <a href="#" class="text-gray-300 hover:text-purple-400"><i data-feather="linkedin"></i></a>
-            <a href="#" class="text-gray-300 hover:text-purple-400"><i data-feather="twitter"></i></a>
-          </div>
-        </div>
-        <div class="glass p-10 flex flex-col items-center text-center shadow-2xl border-2 border-green-400/30 card-hover transition-all duration-300">
-            <img src="" alt="Abdul Rehman" class="w-28 h-28 rounded-full object-cover border-4 border-green-400 mb-5 shadow-lg">
-            <h4 class="font-bold text-xl mb-1 text-green-200">Abdul Rehman</h4>
-            <p class="text-green-400 mb-3 font-semibold">Marketing Manager</p>
-            <div class="flex space-x-3">
-              <a href="#" class="text-gray-300 hover:text-green-400"><i data-feather="linkedin"></i></a>
-              <a href="#" class="text-gray-300 hover:text-green-400"><i data-feather="twitter"></i></a>
-            </div>
-            </div>
-      <div class="glass p-10 flex flex-col items-center text-center shadow-2xl border-2 border-green-400/30 card-hover transition-all duration-300">
-        <img src="" alt="Amna" class="w-28 h-28 rounded-full object-cover border-4 border-green-400 mb-5 shadow-lg">
-        <h4 class="font-bold text-xl mb-1 text-green-200">Amna</h4>
-        <p class="text-green-400 mb-3 font-semibold">Graphic Designer</p>
-        <div class="flex space-x-3">
-          <a href="#" class="text-gray-300 hover:text-green-400"><i data-feather="linkedin"></i></a>
-          <a href="#" class="text-gray-300 hover:text-green-400"><i data-feather="twitter"></i></a>
-        </div>
+  <!-- Team Section -->
+<section id="team" class="team-section fade-in">
+  <div class="team-container">
+    <div class="section-header">
+      <h2 class="section-title neon">Meet Our Team</h2>
+      <p class="section-subtitle">Our creative and experienced professionals</p>
     </div>
-    <div class="glass p-10 flex flex-col items-center text-center shadow-2xl border-2 border-green-400/30 card-hover transition-all duration-300">
-      <img src="" alt="Zainab" class="w-28 h-28 rounded-full object-cover border-4 border-green-400 mb-5 shadow-lg">
-      <h4 class="font-bold text-xl mb-1 text-green-200">Zainab</h4>
-      <p class="text-green-400 mb-3 font-semibold">Graphic Designer</p>
-      <div class="flex space-x-3">
-        <a href="#" class="text-gray-300 hover:text-green-400"><i data-feather="linkedin"></i></a>
-        <a href="#" class="text-gray-300 hover:text-green-400"><i data-feather="twitter"></i></a>
+    <div class="team-grid-flex">
+      <!-- Team Member 1 -->
+      <div class="team-card glass fade-in-up">
+        <img src="img4.jpg" alt="Abdul Ahad" class="team-img">
+        <h4 class="team-name">Abdul Ahad</h4>
+        <p class="team-role">CEO & Founder</p>
+        <div class="team-socials">
+          <a href="https://www.linkedin.com/company/al-ahad-digital-media/"><i data-feather="linkedin"></i></a>
+          <a href="https://www.instagram.com/alahaddigitalmedia?igsh=bDhsbDNwaWlreG82"><i data-feather="instagram"></i></a>
+        </div>
       </div>
-  </div>
-  </div>
-    </div>
-  </section>
+      <!-- Team Member 2 -->
+      <div class="team-card glass fade-in-up">
+        <img src="img3.jpg" alt="Ayaz Ahmed" class="team-img">
+        <h4 class="team-name">Ayaz Ahmed</h4>
+        <p class="team-role">Managing Director</p>
+        <div class="team-socials">
+          <a href="https://www.linkedin.com/in/ayaz-ahmed-71099b10b"><i data-feather="linkedin"></i></a>
+          <a href="https://www.instagram.com/ayazahmed143"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+      <!-- Team Member 3 -->
+      <div class="team-card glass fade-in-up">
+        <img src="img 2.jpg" alt="Hina Fahim" class="team-img">
+        <h4 class="team-name">Hina Fahim</h4>
+        <p class="team-role">Web Developer</p>
+        <div class="team-socials">
+          <a href="https://www.linkedin.com/in/hina-fahim-021515313"><i data-feather="linkedin"></i></a>
+          <a href="https://www.instagram.com/hinayyy6"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+      <!-- Team Member 4 -->
+      <div class="team-card glass fade-in-up">
+        <img src="img5.jpg" alt="Amna" class="team-img">
+        <h4 class="team-name">Amna</h4>
+        <p class="team-role">Graphic Designer</p>
+        <div class="team-socials">
+          <a href="https://www.linkedin.com/in/ak-graphic-designer-b4b81b364"><i data-feather="linkedin"></i></a>
+          <a href="https://www.instagram.com/akgraphicdesigner5547/"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+      <!-- Team Member 5 -->
+        <div class="team-card glass fade-in-up">
+        <img src="img5.jpg" alt="Amna" class="team-img">
+        <h4 class="team-name">Zainab</h4>
+        <p class="team-role">Graphic Designer</p>
+        <div class="team-socials">
+          <a href="https://www.linkedin.com/in/ak-graphic-designer-b4b81b364"><i data-feather="linkedin"></i></a>
+          <a href="https://www.instagram.com/akgraphicdesigner5547/"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+            <!-- Team Member 6 -->
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-24 bg-gradient-to-br from-blue-950 via-gray-950 to-gray-900">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4 neon">Contact Us</h2>
-        <p class="text-gray-300 text-lg">We'd love to hear from you! Fill out the form below or reach us directly.</p>
+      <div class="team-card glass fade-in-up">
+        <img src="img5.jpg" alt="Amna" class="team-img">
+        <h4 class="team-name">Mariyum</h4>
+        <p class="team-role">Sales Manager</p>
+        <div class="team-socials">
+          <a href="https://www.linkedin.com/in/ak-graphic-designer-b4b81b364"><i data-feather="linkedin"></i></a>
+          <a href="https://www.instagram.com/akgraphicdesigner5547/"><i data-feather="instagram"></i></a>
+        </div>
       </div>
-      <div class="grid md:grid-cols-2 gap-12">
+      <!-- Team Member 7 -->
+      <div class="team-card glass fade-in-up">
+        <img src="img6.jpg" alt="Abdul Rehman" class="team-img">
+        <h4 class="team-name">Abdul Rehman</h4>
+        <p class="team-role">Marketing Manager</p>
+        <div class="team-socials">
+          <a href="https://www.linkedin.com/in/abdul-rehman-khan-4a5b96315"><i data-feather="linkedin"></i></a>
+          <a href="https://www.instagram.com/abdulrehmankhan9711/"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section fade-in-up">
+    <div class="contact-container">
+      <div class="section-header">
+        <h2 class="section-title neon animate__animated animate__fadeInDown">Contact Us</h2>
+        <p class="section-subtitle animate__animated animate__fadeInUp">We'd love to hear from you! Fill out the form below or reach us directly.</p>
+      </div>
+      <div class="contact-grid">
         <!-- Contact Form -->
-        <form action="https://formspree.io/f/xdoqzqgy" method="POST" class="glass p-10 rounded-2xl shadow-2xl space-y-8 border-2 border-blue-900/30">
-          <div>
-            <label for="name" class="block text-gray-300 mb-2 font-semibold">Your Name</label>
-            <input type="text" id="name" name="name" required class="w-full px-5 py-3 rounded-xl bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition">
+        <form action="https://formspree.io/f/xdoqzqgy" method="POST" class="contact-form glass fade-in-up">
+          <div class="form-group">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" id="name" name="name" required class="form-control">
           </div>
-          <div>
-            <label for="email" class="block text-gray-300 mb-2 font-semibold">Your Email</label>
-            <input type="email" id="email" name="email" required class="w-full px-5 py-3 rounded-xl bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition">
+          <div class="form-group">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" id="email" name="email" required class="form-control">
           </div>
-          <div>
-            <label for="message" class="block text-gray-300 mb-2 font-semibold">Message</label>
-            <textarea id="message" name="message" rows="4" required class="w-full px-5 py-3 rounded-xl bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition"></textarea>
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" rows="4" required class="form-control"></textarea>
           </div>
-          <button type="submit" class="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-blue-600 hover:to-cyan-500 text-white font-bold rounded-xl shadow-xl btn-glow transition text-lg">Send Message</button>
+          <button type="submit" class="btn btn-primary btn-glow contact-btn">Send Message</button>
           <input type="hidden" name="_replyto" value="alahadigitalmediaa@gmail.com">
         </form>
         <!-- Contact Info -->
-        <div class="flex flex-col items-center justify-center text-center space-y-8">
-          <div>
-            <h4 class="text-2xl font-bold mb-2 text-cyan-300">Email</h4>
-            <a href="mailto:alahadigitalmediaa@gmail.com" class="text-cyan-400 hover:underline text-lg">alahadigitalmediaa@gmail.com</a>
+        <div class="contact-info fade-in-up">
+          <div class="contact-info-block">
+            <h4 class="contact-info-title">Email</h4>
+            <a href="mailto:alahadigitalmediaa@gmail.com" class="contact-info-link">alahaddigitalmediaa@gmail.com</a>
           </div>
-          <div>
-            <h4 class="text-2xl font-bold mb-2 text-green-300">WhatsApp</h4>
-            <a href="https://wa.me/923282059669" target="_blank" class="inline-flex items-center px-7 py-4 bg-gradient-to-r from-green-400 to-cyan-500 hover:from-cyan-500 hover:to-green-400 text-white font-bold rounded-xl shadow-xl btn-glow transition text-lg">
-              <i data-feather="message-circle" class="mr-3"></i> Chat on WhatsApp
+          <div class="contact-info-block">
+            <h4 class="contact-info-title">WhatsApp</h4>
+            <a href="https://wa.me/923282059669" target="_blank" class="btn btn-primary btn-glow whatsapp-btn">
+              <i data-feather="message-circle"></i> Chat on WhatsApp
             </a>
-            <p class="text-gray-400 mt-2 text-lg">+92 328 2059669</p>
+            <p class="contact-info-phone">+92-3282059669</p>
           </div>
-          <div>
-            <h4 class="text-2xl font-bold mb-2 text-blue-300">Follow Us</h4>
-            <div class="flex space-x-5 justify-center">
-              <a href="#" class="text-gray-300 hover:text-cyan-400"><i data-feather="linkedin"></i></a>
-              <a href="#" class="text-gray-300 hover:text-cyan-400"><i data-feather="twitter"></i></a>
-              <a href="#" class="text-gray-300 hover:text-cyan-400"><i data-feather="facebook"></i></a>
+          <div class="contact-info-block">
+            <h4 class="contact-info-title">Follow Us</h4>
+            <div class="contact-socials">
+              <a href="https://www.linkedin.com/company/al-ahad-digital-media/" target="blank"><i data-feather="linkedin"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=61552666288590" target="blank"><i data-feather="facebook"></i></a>
+              <a href="https://www.instagram.com/alahaddigitalmedia?igsh=bDhsbDNwaWlreG82"><i data-feather="instagram"></i target="blank"></a>
             </div>
           </div>
         </div>
@@ -278,9 +348,32 @@
   </section>
 
   <!-- Footer -->
-  <footer class="gradient-footer text-center py-8 mt-16">
-    <div class="max-w-7xl mx-auto px-4">
-      <p class="text-gray-300 text-lg">&copy; 2024 <span class="text-cyan-400 font-bold">Al Ahad Digital Media Agency</span>. All rights reserved.</p>
+  <footer class="footer-section fade-in">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#fff" fill-opacity="1"
+          d="M0,32L60,37.3C120,43,240,53,360,58.7C480,64,600,64,720,58.7C840,53,960,43,1080,42.7C1200,43,1320,53,1380,58.7L1440,64L1440,80L1380,80C1320,80,1200,80,1080,80C960,80,840,80,720,80C600,80,480,80,360,80C240,80,120,80,60,80L0,80Z">
+        </path>
+      </svg>
+    </div>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="logo img.jpg" alt="Logo" class="footer-logo">
+        <span class="footer-brand-name">Al Ahad Digital Media</span>
+      </div>
+      <div class="footer-links">
+        <a href="#services" class="footer-link">Services</a>
+        <a href="#team" class="footer-link">Team</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/profile.php?id=61552666288590" target="blank"><i data-feather="facebook"></i></a>
+        <a href="https://www.instagram.com/alahaddigitalmedia?igsh=bDhsbDNwaWlreG82" target="blank"><i data-feather="instagram"></i></a>
+        <a href="https://www.linkedin.com/in/abdul-ahad-%D8%B9%D8%A8%D8%AF%D9%84-%D8%A7%D8%AD%D8%AF-b59791268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="blank"><i data-feather="linkedin"></i></a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      © 2024-25 <span class="footer-copyright-brand">Al Ahad Digital Media Agency</span>. All rights reserved.
     </div>
   </footer>
 
@@ -289,15 +382,27 @@
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
     btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
+      menu.classList.toggle('mobile-menu-open');
     });
     // Feather icons
     feather.replace();
+    // Slider Functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelectorAll('.slide');
+      let currentSlide = 0;
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
+      }
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+      showSlide(currentSlide);
+      setInterval(nextSlide, 5000);
+    });
   </script>
-  <script src="main.js"></script>
-  <script>
-    feather.replace();
-  </script>
-  
 </body>
+
 </html>
